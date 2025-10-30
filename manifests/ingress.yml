@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nextgenz-ingress
+  namespace: nextgenz
+  annotations:
+    alb.ingress.kubernetes.io/security-groups: sg-06baa4fd8ccee0479
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/wafv2-acl-arn: arn:aws:wafv2:us-east-1:635476134260:regional/webacl/next-gen-z-waf_web_acl-prod-webacl/f9d53765-a686-4a9b-a061-f05e65edfb35 
+spec:
+  ingressClassName: alb
+  rules:
+  - host: nextgenz.635476134260.realhandsonlabs.net
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: nextgenz-svc
+            port:
+              number: 80

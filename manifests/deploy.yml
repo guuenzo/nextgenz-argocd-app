@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: nextgenz-deploy
+  name: nextgenz-deploy
+  namespace: nextgenz
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nextgenz-deploy
+  template:
+    metadata:
+      labels:
+        app: nextgenz-deploy
+    spec:
+      containers:
+      - image: 635476134260.dkr.ecr.us-east-1.amazonaws.com/nextgenz:latest
+        name: nextgenz-app
+        ports:
+        - containerPort: 5000
+        env:
+        - name: DB_HOST
+          value: "nextgenz-prod-db-instance.c69imsec80r6.us-east-1.rds.amazonaws.com"
+        - name: DB_USER
+          value: "admin"
+        - name: DB_PASSWORD
+          value: "S3nai#134!"
+        - name: DB_NAME
+          value: "library"
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "128Mi"
+          limits:
+            cpu: "500m"
+            memory: "512Mi"

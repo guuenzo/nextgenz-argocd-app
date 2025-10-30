@@ -1,0 +1,18 @@
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: nextgenz-cpu-scaledobject
+  namespace: nextgenz
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: nextgenz-deploy
+  minReplicaCount: 6
+  maxReplicaCount: 12
+  pollingInterval: 30
+  triggers:
+  - type: cpu
+    metricType: Utilization
+    metadata:
+      value: "60"
