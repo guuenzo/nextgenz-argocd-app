@@ -16,7 +16,7 @@ spec:
         app: nextgenz-deploy
     spec:
       containers:
-      - image: nginx:alpine
+      - image: 635476134260.dkr.ecr.us-east-1.amazonaws.com/nextgenz:latest
         name: nextgenz-app
         ports:
         - containerPort: 5000
