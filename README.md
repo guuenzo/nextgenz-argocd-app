@@ -1,0 +1,1 @@
+# nextgenz-argocd-app
