@@ -4,14 +4,14 @@ metadata:
   name: nextgenz-ingress
   namespace: nextgenz
   annotations:
-    alb.ingress.kubernetes.io/security-groups: sg-06baa4fd8ccee0479
+    alb.ingress.kubernetes.io/security-groups: sg-0656dd727fbda69d8
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
-    alb.ingress.kubernetes.io/wafv2-acl-arn: arn:aws:wafv2:us-east-1:635476134260:regional/webacl/next-gen-z-waf_web_acl-prod-webacl/f9d53765-a686-4a9b-a061-f05e65edfb35 
+    alb.ingress.kubernetes.io/wafv2-acl-arn: arn:aws:wafv2:us-east-1:943812324876:regional/webacl/next-gen-z-waf_web_acl-prod-webacl/2067f254-d833-4514-863b-6b71107242f2 
 spec:
   ingressClassName: alb
   rules:
-  - host: nextgenz.635476134260.realhandsonlabs.net
+  - host: nextgenz.943812324876.realhandsonlabs.net
     http:
       paths:
       - path: /
