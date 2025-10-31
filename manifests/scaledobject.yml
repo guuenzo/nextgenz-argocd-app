@@ -9,7 +9,7 @@ spec:
     kind: Deployment
     name: nextgenz-deploy
   minReplicaCount: 1
-  maxReplicaCount: 2
+  maxReplicaCount: 1
   triggers:
   - type: cpu
     metricType: Utilization
