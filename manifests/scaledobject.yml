@@ -8,8 +8,8 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: nextgenz-deploy
-  minReplicaCount: 2
-  maxReplicaCount: 4
+  minReplicaCount: 3
+  maxReplicaCount: 6
   pollingInterval: 30
   triggers:
   - type: cpu
