@@ -4,6 +4,7 @@ metadata:
   labels:
     app: nginx-svc
   name: nginx-svc
+  namespace: nextgenz
 spec:
   ports:
   - name: ports
