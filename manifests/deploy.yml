@@ -6,7 +6,6 @@ metadata:
   name: nginx-deploy
   namespace: nextgenz
 spec:
-  replicas: 1
   selector:
     matchLabels:
       app: nginx-deploy
