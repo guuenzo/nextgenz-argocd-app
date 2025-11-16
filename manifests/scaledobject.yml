@@ -4,6 +4,8 @@ metadata:
   name: nginx-cpu-scaledobject
   namespace: nextgenz
 spec:
+  minReplicaCount: 3
+  maxReplicaCount: 6
   scaleTargetRef:
     name: nginx-deploy
   triggers:
