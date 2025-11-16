@@ -10,7 +10,6 @@ spec:
   selector:
     matchLabels:
       app: nginx-deploy
-  strategy: {}
   template:
     metadata:
       labels:
@@ -21,11 +20,11 @@ spec:
         name: nginx-deploy
         ports:
         - containerPort: 80
-        resources: 
+        resources:
           requests:
             cpu: "100m"
             memory: "64Mi"
-          limits: 
+          limits:
             cpu: "200m"
             memory: "128Mi"
-status: {}
+
