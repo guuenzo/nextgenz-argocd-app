@@ -1,0 +1,13 @@
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: nginx-cpu-scaledobject
+  namespace: nextgenz
+spec:
+  scaleTargetRef:
+    name: nginx-deploy
+  triggers:
+  - type: cpu
+    metricType: Utilization
+    metadata:
+      value: "50"
