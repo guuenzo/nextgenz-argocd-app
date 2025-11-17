@@ -9,7 +9,7 @@ metadata:
     alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/wafv2-acl-arn: arn:aws:wafv2:us-east-1:215726090298:regional/webacl/next-gen-z-waf_web_acl-prod-webacl/4380be2c-cbc9-4037-b4e6-e8f21493bdf4
     alb.ingress.kubernetes.io/security-groups: sg-0f203d37bf7c449b7
-    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":80}, {"HTTPS":443}]'
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443},{"HTTP":80}]'
     alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:215726090298:certificate/fe7b98f7-f42e-46ed-b7ef-870308467dcb
     alb.ingress.kubernetes.io/ssl-redirect: "443"
     alb.ingress.kubernetes.io/ssl-policy: ELBSecurityPolicy-TLS13-1-2-2021-06
