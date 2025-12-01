@@ -11,7 +11,7 @@ metadata:
     alb.ingress.kubernetes.io/security-groups: sg-0d8fe5e8e60ebe9d5
 spec:
   rules:
-  - host: nginx.215726090298.realhandsonlabs.net
+  - host: nginx.635476133799.realhandsonlabs.net
     http:
       paths:
       - path: /
