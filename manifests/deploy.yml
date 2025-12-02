@@ -2,24 +2,24 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: nginx-deploy
-  name: nginx-deploy
+    app: nextgenz-deploy
+  name: nextgenz-deploy
   namespace: nextgenz
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nginx-deploy
+      app: nextgenz-deploy
   template:
     metadata:
       labels:
-        app: nginx-deploy
+        app: nextgenz-deploy
     spec:
       containers:
-      - image: nginx:alpine
-        name: nginx-deploy
+      - name: nextgenz-deploy
+        image: 
         ports:
-        - containerPort: 80
+        - containerPort: 5000
         resources:
           requests:
             cpu: "100m"
