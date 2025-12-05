@@ -7,11 +7,11 @@ metadata:
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
-    alb.ingress.kubernetes.io/wafv2-acl-arn: arn:aws:wafv2:us-east-1:182066453473:regional/webacl/next-gen-z-waf_web_acl-prod-webacl/490617ce-a534-47d1-adac-379b39b7356f
-    alb.ingress.kubernetes.io/security-groups: sg-0ee9671ce0f18f69b
+    alb.ingress.kubernetes.io/wafv2-acl-arn: arn:aws:wafv2:us-east-1:475698774125:regional/webacl/next-gen-z-waf_web_acl-prod-webacl/b5dcfad7-d4e0-4dbf-b97e-6f34079ca244
+    alb.ingress.kubernetes.io/security-groups: sg-05c2aba047c7bf8b1
 spec:
   rules:
-  - host: nextgenz.182066453473.realhandsonlabs.net
+  - host: nextgenz.475698774125.realhandsonlabs.net
     http:
       paths:
       - path: /
